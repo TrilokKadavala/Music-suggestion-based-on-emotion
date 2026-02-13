@@ -92,7 +92,7 @@ rf_model = RandomForestClassifier(n_estimators=150)
 rf_model.fit(X_train, y_train)
 rf_acc = accuracy_score(y_test, rf_model.predict(X_test))
 print("Random Forest Accuracy:", rf_acc)
-joblib.dump(rf_model, "rf_model.pkl")
+joblib.dump(rf_model, "models/rf_model.pkl")
 
 # ================================
 # 2️⃣ SVM
@@ -102,7 +102,7 @@ svm_model = SVC(kernel="rbf", probability=True)
 svm_model.fit(X_train, y_train)
 svm_acc = accuracy_score(y_test, svm_model.predict(X_test))
 print("SVM Accuracy:", svm_acc)
-joblib.dump(svm_model, "svm_model.pkl")
+joblib.dump(svm_model, "models/svm_model.pkl")
 
 # ================================
 # 3️⃣ LOGISTIC REGRESSION
@@ -112,7 +112,7 @@ lr_model = LogisticRegression(max_iter=2000)
 lr_model.fit(X_train, y_train)
 lr_acc = accuracy_score(y_test, lr_model.predict(X_test))
 print("Logistic Regression Accuracy:", lr_acc)
-joblib.dump(lr_model, "lr_model.pkl")
+joblib.dump(lr_model, "models/lr_model.pkl")
 
 # ================================
 # 4️⃣ DECISION TREE
@@ -122,7 +122,7 @@ dt_model = DecisionTreeClassifier()
 dt_model.fit(X_train, y_train)
 dt_acc = accuracy_score(y_test, dt_model.predict(X_test))
 print("Decision Tree Accuracy:", dt_acc)
-joblib.dump(dt_model, "dt_model.pkl")
+joblib.dump(dt_model, "models/dt_model.pkl")
 
 # ================================
 # 5️⃣ KNN
@@ -132,6 +132,6 @@ knn_model = KNeighborsClassifier(n_neighbors=5)
 knn_model.fit(X_train, y_train)
 knn_acc = accuracy_score(y_test, knn_model.predict(X_test))
 print("KNN Accuracy:", knn_acc)
-joblib.dump(knn_model, "knn_model.pkl")
+joblib.dump(knn_model, "models/knn_model.pkl")
 
 print("ALL MODELS TRAINED SUCCESSFULLY")
