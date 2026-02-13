@@ -52,11 +52,11 @@ conn.close()
 # ==========================================
 print("Loading trained models...")
 
-rf_model = joblib.load("rf_model.pkl")
-svm_model = joblib.load("svm_model.pkl")
-lr_model = joblib.load("lr_model.pkl")
-dt_model = joblib.load("dt_model.pkl")
-knn_model = joblib.load("knn_model.pkl")
+rf_model = joblib.load("models/rf_model.pkl")
+svm_model = joblib.load("models/svm_model.pkl")
+lr_model = joblib.load("models/lr_model.pkl")
+dt_model = joblib.load("models/dt_model.pkl")
+knn_model = joblib.load("models/knn_model.pkl")
 
 print("All models loaded successfully")
 
